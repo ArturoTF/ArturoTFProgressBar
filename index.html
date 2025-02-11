@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProgressBar</title>
+</head>
+<body>
+
+    <h2>ArturoTF ProgressBar</h2>
+    <div id="progress-container"></div>
+
+    <button onclick="incrementar()">Incrementar</button>
+    <button onclick="disminuir()">Disminuir</button>
+
+    <script src="js/progressbar.js"></script>
+    <script>
+        // Instancia con todos los valores
+        const progressBar = new ProgressBar({
+            parent: "#progress-container",
+            width: '300px',
+            height: '30px',
+            fillColor: '#ff5733',
+            backgroundColor: '#ddd',
+            maxValue: 100,
+            value: 20,
+            showText: true,
+            animationSpeed: 400
+        });
+
+        // Función para incrementar el progreso
+        function incrementar() {
+            progressBar.update(progressBar.value + 10);
+        }
+
+        function disminuir() {
+            progressBar.update(progressBar.value - 10);
+            
+        }
+    </script>
+</body>
+</html>
