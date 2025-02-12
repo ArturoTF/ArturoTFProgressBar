@@ -3,40 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProgressBar</title>
+    <title>ProgressBar Animations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .progress-container {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <h2>ArturoTF ProgressBar</h2>
-    <div id="progress-container"></div>
+    <h2>Progress Bar Animations</h2>
 
-    <button onclick="incrementar()">Incrementar</button>
-    <button onclick="disminuir()">Disminuir</button>
+    <div class="progress-container" id="progress-multicolor"></div>
+    <div class="progress-container" id="progress-pulse"></div>
+    <div class="progress-container" id="progress-wave"></div>
+    <div class="progress-container" id="progress-fire"></div>
+    <div class="progress-container" id="progress-ocean"></div>
+    <div class="progress-container" id="progress-neon"></div>
+    <div class="progress-container" id="progress-fade"></div>
 
     <script src="js/progressbar.js"></script>
     <script>
-        // Instancia con todos los valores
-        const progressBar = new ProgressBar({
-            parent: "#progress-container",
-            width: '300px',
-            height: '30px',
-            fillColor: '#ff5733',
-            backgroundColor: '#ddd',
-            maxValue: 100,
-            value: 20,
-            showText: true,
-            animationSpeed: 400
+        const types = ["multicolor", "pulse", "wave", "fire", "ocean", "neon", "fade"];
+        
+        types.forEach(type => {
+            new ProgressBar({
+                parent: `#progress-${type}`,
+                width: '300px',
+                height: '30px',
+                fillColor: type, // Usa cada tipo de animación
+                backgroundColor: '#ddd',
+                maxValue: 100,
+                value: 50,
+                showText: true,
+                animationSpeed: 400
+            });
         });
-
-        // Función para incrementar el progreso
-        function incrementar() {
-            progressBar.update(progressBar.value + 10);
-        }
-
-        function disminuir() {
-            progressBar.update(progressBar.value - 10);
-            
-        }
     </script>
+
 </body>
 </html>
