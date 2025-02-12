@@ -12,10 +12,6 @@ ProgressBar.js es una biblioteca en JavaScript que permite crear barras de progr
    <script src="js/progressbar.min.js"></script>
    ```
 
-### Opción 2: Usar un CDN *(Próximamente)*
-
----
-
 ## 🚀 Cómo usar ProgressBar.js
 
 ### 📌 Crear una instancia de `ProgressBar`
