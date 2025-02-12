@@ -25,13 +25,16 @@
     <div class="progress-container" id="progress-ocean"></div>
     <div class="progress-container" id="progress-neon"></div>
     <div class="progress-container" id="progress-fade"></div>
+    
+    <button onclick="ajustar()">Click me</button>
 
     <script src="js/progressbar.min.js"></script>
     <script>
         const types = ["multicolor", "pulse", "wave", "fire", "ocean", "neon", "fade"];
-        
+        const progressBars = {}; // Objeto para almacenar las instancias
+
         types.forEach(type => {
-            new ProgressBar({
+            progressBars[type] = new ProgressBar({
                 parent: `#progress-${type}`,
                 width: '300px',
                 height: '30px',
@@ -43,9 +46,11 @@
                 animationSpeed: 400
             });
         });
+
+        function ajustar() {
+            progressBars["multicolor"].update(75);
+        }
     </script>
 
 </body>
 </html>
-
-
