@@ -45,8 +45,8 @@ El atributo `fillColor` define el color o animación de la barra de progreso.
   - `wave` 🌊 (Movimiento de onda)
   - `fire` 🔥 (Efecto de fuego dinámico)
   - `ocean` 🌊 (Tonos de mar animados)
-  - `neon` 💡 (Brillo neón resplandeciente)
-  - `shadow` 🎭 (Sombra oscilante)
+  - `neon` 💡 (Color naon fuerte)
+  - `fade` 🎭 (Color Fade)
 
 Ejemplo:
 ```js
