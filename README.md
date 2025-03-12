@@ -30,6 +30,7 @@ const progressBar = new ProgressBar({
     animationSpeed: 400
 });
 ```
+Tenemos que crear un div con un id o clase y este tiene que estar llamada (.progress-container || #progress-container) en la parte de parent al crear la instancia. 
 
 Esto creará una barra dentro del elemento con el ID `progress-container`.
 
